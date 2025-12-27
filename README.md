@@ -1,8 +1,6 @@
 # Predicción de Precios de Acciones Mastercard usando Red Neuronal (LSTM)
 
-Este proyecto implementa un modelo de red neuronal LSTM (Long Short-Term Memory) para predecir los precios de cierre 
-de las acciones de Mastercard. Incluye un análisis completo de indicadores técnicos, evaluación del modelo con múltiples 
-métricas, y predicciones futuras con análisis detallado.
+Este proyecto implementa un modelo de red neuronal LSTM (Long Short-Term Memory) para predecir los precios de cierre de las acciones de Mastercard. Incluye un análisis completo de indicadores técnicos, evaluación del modelo con múltiples métricas, predicciones futuras y análisis detallados en dos flujos de trabajo diferentes.
 
 ## 📊 Fuente de Datos
 
@@ -77,21 +75,37 @@ MasterCard_Data/
 │   ├── Mastercard_stock_info.csv
 │   └── Mastercard_stock_splits.csv
 │
-├── Analisis_de_Predicciones/         # Análisis detallado de predicciones
-│   ├── analisis_predicciones.py      # Script de análisis
-│   ├── analisis_predicciones.png     # Gráficos de análisis
-│   └── predicciones_futuras.csv      # Predicciones generadas
+├── Modelo_Entrenado/                 # Modelo entrenado y herramientas
+│   ├── modelo_lstm.keras            # Modelo entrenado guardado
+│   ├── scaler.pkl                   # Normalizador guardado
+│   ├── metadatos.json               # Configuración y métricas del modelo
+│   ├── usar_modelo.py               # Script para usar el modelo entrenado
+│   ├── analizar_predicciones.py     # Script de análisis avanzado
+│   ├── predicciones_generadas.csv   # Predicciones generadas
+│   ├── predicciones_modelo.png      # Gráfico de predicciones
+│   ├── analisis_predicciones.png    # Gráficos de análisis (9 gráficos)
+│   └── informe_predicciones.txt     # Informe de texto detallado
 │
-├── stock_price_prediction_lstm.py    # Script principal de predicción
-├── prediccion_mastercard_lstm.png    # Gráficos principales del modelo
-├── requirements.txt                   # Dependencias del proyecto
-├── referencia_dataset_kaggle.txt     # Referencia al dataset de Kaggle
-└── README.md                          # Este archivo
+├── Analisis_de_Predicciones/        # Análisis básico (generado por script principal)
+│   ├── analisis_predicciones.py     # Script de análisis básico
+│   ├── analisis_predicciones.png    # Gráficos de análisis (6 gráficos)
+│   └── predicciones_futuras.csv     # Predicciones generadas por script principal
+│
+├── stock_price_prediction_lstm.py   # Script principal de entrenamiento
+├── prediccion_mastercard_lstm.png   # Gráficos principales del modelo (6 gráficos)
+├── requirements.txt                 # Dependencias del proyecto
+└── README.md                        # Este archivo
 ```
 
-## 📊 Uso
+## 📊 Flujos de Trabajo
 
-### 1. Predicción Principal
+Este proyecto ofrece **dos flujos de trabajo diferentes** según tus necesidades:
+
+### 🔄 Flujo 1: Entrenamiento Completo + Análisis Básico
+
+Este flujo entrena el modelo desde cero y genera un análisis básico de las predicciones.
+
+#### Paso 1: Entrenar el Modelo
 
 Ejecutar el script principal para entrenar el modelo y generar predicciones:
 
@@ -106,7 +120,8 @@ Este script realiza:
 4. ✅ Construcción y entrenamiento del modelo LSTM
 5. ✅ Evaluación con métricas (RMSE, MAE, MAPE)
 6. ✅ Predicción de próximos 30 días
-7. ✅ Generación de visualizaciones completas
+7. ✅ Guardado del modelo en `Modelo_Entrenado/`
+8. ✅ Generación de visualizaciones completas
 
 **Archivos generados:**
 - `prediccion_mastercard_lstm.png`: Gráficos con 6 visualizaciones:
@@ -116,32 +131,122 @@ Este script realiza:
   - RSI (últimos 500 días)
   - MACD (últimos 500 días)
   - Precio con medias móviles (últimos 500 días)
+- `Modelo_Entrenado/modelo_lstm.keras`: Modelo entrenado
+- `Modelo_Entrenado/scaler.pkl`: Normalizador guardado
+- `Modelo_Entrenado/metadatos.json`: Metadatos del modelo
 - `Analisis_de_Predicciones/predicciones_futuras.csv`: Predicciones para los próximos 30 días
 
-### 2. Análisis Detallado de Predicciones
+#### Paso 2: Análisis Básico de Predicciones
 
-Después de ejecutar el script principal, ejecutar el análisis detallado:
+Después de ejecutar el script principal, ejecutar el análisis básico:
 
 ```bash
 python Analisis_de_Predicciones/analisis_predicciones.py
 ```
 
-Este script realiza un análisis exhaustivo de las predicciones:
+Este script realiza un análisis básico de las predicciones:
 1. ✅ Estadísticas descriptivas (precio inicial, final, máximo, mínimo, promedio, mediana)
 2. ✅ Análisis de tendencia (alcista/bajista, velocidad de cambio)
 3. ✅ Comparación con datos históricos (últimos 30 días)
 4. ✅ Análisis de riesgo (drawdown máximo, rango de precios, rachas)
 5. ✅ Proyecciones adicionales (por semana)
-6. ✅ Visualizaciones detalladas (6 gráficos)
+6. ✅ Visualizaciones (6 gráficos)
 
 **Archivos generados:**
-- `Analisis_de_Predicciones/analisis_predicciones.png`: Gráficos de análisis con 6 visualizaciones:
-  - Predicciones con tendencia
-  - Cambios diarios
-  - Comparación con histórico
-  - Distribución de cambios porcentuales
-  - Drawdown
-  - Proyección semanal
+- `Analisis_de_Predicciones/analisis_predicciones.png`: Gráficos de análisis con 6 visualizaciones
+
+---
+
+### 🔄 Flujo 2: Uso del Modelo Entrenado + Análisis Avanzado
+
+Este flujo permite usar un modelo ya entrenado (sin necesidad de reentrenar) y genera un análisis más completo.
+
+#### Paso 1: Usar el Modelo Entrenado
+
+Si ya tienes un modelo entrenado en `Modelo_Entrenado/`, puedes generar nuevas predicciones:
+
+```bash
+python Modelo_Entrenado/usar_modelo.py
+```
+
+Este script:
+1. ✅ Carga el modelo entrenado desde `modelo_lstm.keras`
+2. ✅ Carga el scaler y metadatos guardados
+3. ✅ Genera predicciones para los próximos 30 días
+4. ✅ Guarda las predicciones en `predicciones_generadas.csv`
+5. ✅ Genera visualización de predicciones
+
+**Archivos generados:**
+- `Modelo_Entrenado/predicciones_generadas.csv`: Predicciones para los próximos 30 días
+- `Modelo_Entrenado/predicciones_modelo.png`: Gráfico de predicciones
+
+**Parámetros configurables en `usar_modelo.py`:**
+```python
+hacer_predicciones(
+    dias_futuros=30,  # Número de días a predecir
+    datos_csv='../Datasets_Mastercard/Mastercard_stock_history.csv',  # Ruta a datos
+    mostrar_grafico=True  # Mostrar gráfico
+)
+```
+
+#### Paso 2: Análisis Avanzado de Predicciones
+
+Ejecutar el análisis avanzado (más completo que el básico):
+
+```bash
+python Modelo_Entrenado/analizar_predicciones.py
+```
+
+Este script realiza un análisis exhaustivo de las predicciones:
+1. ✅ Estadísticas descriptivas completas
+2. ✅ Análisis de tendencia detallado
+3. ✅ Comparación con datos históricos
+4. ✅ Análisis de riesgo (drawdown, volatilidad, rachas)
+5. ✅ Análisis de volatilidad detallado (top días más volátiles)
+6. ✅ Proyecciones por semana
+7. ✅ Visualizaciones avanzadas (9 gráficos)
+8. ✅ Genera informe de texto completo
+
+**Archivos generados:**
+- `Modelo_Entrenado/analisis_predicciones.png`: Gráficos de análisis con 9 visualizaciones:
+  1. Predicciones con tendencia y bandas
+  2. Cambios diarios
+  3. Comparación con histórico
+  4. Distribución de cambios porcentuales
+  5. Drawdown
+  6. Precio con bandas de volatilidad
+  7. Proyección semanal
+  8. Métricas comparativas
+  9. Resumen de cambios porcentuales
+- `Modelo_Entrenado/informe_predicciones.txt`: Informe de texto detallado con todas las métricas
+
+---
+
+## 🔍 Comparación de Flujos
+
+| Característica | Flujo 1: Análisis Básico | Flujo 2: Análisis Avanzado |
+|----------------|-------------------------|----------------------------|
+| **Ubicación** | `Analisis_de_Predicciones/` | `Modelo_Entrenado/` |
+| **Requiere entrenamiento** | Sí (primero ejecutar script principal) | No (usa modelo ya entrenado) |
+| **Gráficos generados** | 6 gráficos | 9 gráficos |
+| **Informe de texto** | No | Sí |
+| **Análisis de volatilidad** | Básico | Detallado (top días) |
+| **Información del modelo** | No incluye métricas | Incluye RMSE, MAE, MAPE |
+| **Complejidad del código** | Script simple | Código modular con funciones |
+| **Reutilización del modelo** | No | Sí (puedes usar modelo guardado) |
+
+### ¿Cuándo usar cada flujo?
+
+**Usa Flujo 1** si:
+- Quieres entrenar el modelo desde cero
+- Necesitas un análisis rápido y básico
+- Es la primera vez que ejecutas el proyecto
+
+**Usa Flujo 2** si:
+- Ya tienes un modelo entrenado
+- Necesitas un análisis más completo y detallado
+- Quieres generar nuevas predicciones sin reentrenar
+- Necesitas un informe de texto con todas las métricas
 
 ## 📈 Métricas del Modelo
 
@@ -151,11 +256,11 @@ El modelo se evalúa usando las siguientes métricas:
 - **MAE** (Mean Absolute Error): Error absoluto medio
 - **MAPE** (Mean Absolute Percentage Error): Error porcentual absoluto medio
 
-Estas métricas se calculan sobre el conjunto de prueba (20% de los datos) y se muestran tanto en consola como en los gráficos.
+Estas métricas se calculan sobre el conjunto de prueba (20% de los datos) y se muestran tanto en consola como en los gráficos. También se guardan en `Modelo_Entrenado/metadatos.json` para referencia futura.
 
 ## ⚙️ Parámetros Configurables
 
-En `stock_price_prediction_lstm.py` puedes ajustar:
+### Parámetros Principales (en `stock_price_prediction_lstm.py`)
 
 ```python
 SEQUENCE_LENGTH = 60    # Días históricos para predecir (default: 60)
@@ -168,7 +273,7 @@ TEST_SIZE = 0.2         # Porcentaje de datos para testing (default: 0.2)
 ```python
 # Arquitectura LSTM
 LSTM_UNITS = 50         # Unidades en cada capa LSTM
-DROPOUT_RATE = 0.2     # Tasa de dropout
+DROPOUT_RATE = 0.2      # Tasa de dropout
 BATCH_SIZE = 32         # Tamaño del batch
 EPOCHS = 50             # Número máximo de épocas
 ```
@@ -193,17 +298,30 @@ MA_PERIODS = [7, 14, 30, 50, 200]  # Períodos de medias móviles
 5. **MACD**: Indicador de convergencia/divergencia (últimos 500 días)
 6. **Precio con Medias Móviles**: Precio de cierre con todas las medias móviles
 
-### Script de Análisis (`analisis_predicciones.png`)
-1. **Predicciones con Tendencia**: Predicciones futuras con línea de tendencia
+### Análisis Básico (`Analisis_de_Predicciones/analisis_predicciones.png`)
+1. **Predicciones con Tendencia**: Predicciones futuras con línea de tendencia (MA 5)
 2. **Cambios Diarios**: Barras de cambios diarios (verde/rojo)
 3. **Comparación Histórica**: Últimos 60 días históricos vs 30 días predichos
 4. **Distribución de Cambios**: Histograma de cambios porcentuales diarios
 5. **Drawdown**: Análisis de caídas máximas desde el inicio
 6. **Proyección Semanal**: Precio proyectado por semana
 
-## 🔍 Análisis de Predicciones
+### Análisis Avanzado (`Modelo_Entrenado/analisis_predicciones.png`)
+1. **Predicciones con Tendencia**: Predicciones con bandas de rango y líneas de referencia
+2. **Cambios Diarios**: Barras de cambios diarios con línea de promedio
+3. **Comparación Histórica**: Últimos 60 días históricos vs predicciones
+4. **Distribución de Cambios**: Histograma de cambios porcentuales diarios
+5. **Drawdown**: Análisis de caídas máximas (en porcentaje)
+6. **Bandas de Volatilidad**: Precio con bandas de ±1 y ±2 desviaciones estándar
+7. **Proyección Semanal**: Precio promedio por semana
+8. **Métricas Comparativas**: Gráfico de barras con máx, mín, promedio y mediana
+9. **Resumen de Cambios**: Cambios porcentuales totales y comparativos
 
-El script de análisis proporciona:
+### Uso del Modelo (`Modelo_Entrenado/predicciones_modelo.png`)
+- Gráfico de líneas mostrando últimos 200 días históricos + predicciones futuras
+- Línea vertical indicando el inicio de las predicciones
+
+## 🔍 Análisis de Predicciones
 
 ### Estadísticas Descriptivas
 - Precio inicial y final
@@ -214,18 +332,31 @@ El script de análisis proporciona:
 - Volatilidad diaria
 
 ### Análisis de Tendencia
-- Tipo de tendencia (alcista/bajista)
-- Velocidad de cambio
+- Tipo de tendencia (alcista/bajista/lateral)
+- Velocidad de cambio diario
 - Día con mayor cambio
+- Máximas rachas alcistas/bajistas
 
 ### Análisis de Riesgo
-- Máximo drawdown
+- Máximo drawdown (caída máxima desde el inicio)
 - Rango de precios
 - Máxima racha bajista/alcista
+- Volatilidad diaria y coeficiente de variación
 
 ### Proyecciones Temporales
 - Proyección por semana (semana 1, 2, 4)
 - Comparación con datos históricos
+- Diferencia vs último precio conocido
+
+### Informe de Texto (Solo Flujo 2)
+El análisis avanzado genera un informe de texto completo (`informe_predicciones.txt`) que incluye:
+1. Información del modelo (métricas de rendimiento)
+2. Estadísticas descriptivas completas
+3. Análisis de cambios detallado
+4. Comparación con último precio conocido
+5. Análisis de tendencia
+6. Análisis de volatilidad (incluyendo top 5 días más volátiles)
+7. Resumen ejecutivo con recomendaciones
 
 ## 📝 Notas Importantes
 
@@ -234,17 +365,19 @@ El script de análisis proporciona:
 - ⚠️ **Rendimiento**: El rendimiento del modelo puede variar según las condiciones del mercado
 - ⚠️ **Limitaciones**: Los modelos de predicción de series temporales tienen limitaciones inherentes y no pueden predecir eventos imprevistos o cambios estructurales en el mercado
 - ⚠️ **Uso responsable**: Este proyecto es para fines educativos y de investigación
+- ⚠️ **Modelo guardado**: Una vez entrenado, el modelo se guarda en `Modelo_Entrenado/` y puede reutilizarse sin necesidad de reentrenar
+- ⚠️ **Archivos generados**: Asegúrate de tener espacio en disco, ya que se generan varios archivos de imagen y datos
 
 ## 📚 Referencias
 
 - **Dataset**: [Mastercard Stock Data - Latest and Updated](https://www.kaggle.com/datasets/kalilurrahman/mastercard-stock-data-latest-and-updated)
 - **LSTM**: Long Short-Term Memory networks para series temporales
 - **Indicadores Técnicos**: RSI, MACD, Moving Averages
+- **TensorFlow/Keras**: Framework de deep learning
+- **Scikit-learn**: Biblioteca de machine learning
 
 ## 📄 Licencia
 
 Este proyecto es de código abierto y está disponible para uso educativo y de investigación.
-
 ---
-
 **Desarrollado para análisis de predicción de precios de acciones usando Deep Learning**
