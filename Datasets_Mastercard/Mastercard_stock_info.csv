@@ -1,0 +1,174 @@
+address1,2000 Purchase Street
+city,Purchase
+state,NY
+zip,10577
+country,United States
+phone,914 249 2000
+website,https://www.mastercard.com
+industry,Credit Services
+industryKey,credit-services
+industryDisp,Credit Services
+sector,Financial Services
+sectorKey,financial-services
+sectorDisp,Financial Services
+longBusinessSummary,"Mastercard Incorporated, a technology company, provides transaction processing and other payment-related products and services in the United States and internationally. The company offers integrated products and value-added services for account holders, merchants, financial institutions, digital partners, businesses, governments, and other organizations, such as programs that enable issuers to provide consumers with credits to defer payments; payment products and solutions that allow its customers to access funds in deposit and other accounts; prepaid programs services; consumer bill payment services; and commercial credit, debit, and prepaid payment products and solutions. It also provides solutions that enable businesses or governments to make payments to businesses, including Virtual Card Number, which is generated dynamically from a physical card and leverages the credit limit of the funding account; and a platform to optimize supplier payment enablement campaigns for financial institutions. In addition, the company offers Mastercard Move, which partners with digital messaging and payment platforms to enable consumers to send money directly within applications to other consumers; and partners with central banks, fintechs and financial institutions to help governments and nonprofits, as well as enables various cross-border payment flows. Further, it provides security solutions; personalization, issuer and merchant loyalty, and marketing services; advanced analytics, business intelligence, economic and location-based insights, payments consulting, and operational insights services; processing and gateway solutions; and open banking services. The company offers payment solutions and services under the MasterCard, Maestro, and Cirrus names. Mastercard Incorporated was founded in 1966 and is headquartered in Purchase, New York."
+fullTimeEmployees,35300
+companyOfficers,"[{'maxAge': 1, 'name': 'Mr. Michael  Miebach', 'age': 56, 'title': 'CEO, President & Director', 'yearBorn': 1968, 'fiscalYear': 2023, 'totalPay': 5611593, 'exercisedValue': 4503784, 'unexercisedValue': 23179328}, {'maxAge': 1, 'name': 'Mr. Sachin  Mehra', 'age': 53, 'title': 'Chief Financial Officer', 'yearBorn': 1971, 'fiscalYear': 2023, 'totalPay': 2657870, 'exercisedValue': 5105860, 'unexercisedValue': 9861247}, {'maxAge': 1, 'name': 'Mr. Edward Grunde McLaughlin', 'age': 58, 'title': 'President of Mastercard Technology & CTO', 'yearBorn': 1966, 'fiscalYear': 2023, 'totalPay': 1724467, 'exercisedValue': 5717820, 'unexercisedValue': 18832056}, {'maxAge': 1, 'name': 'Mr. Timothy Henry Murphy J.D.', 'age': 56, 'title': 'Chief Administrative Officer', 'yearBorn': 1968, 'fiscalYear': 2023, 'totalPay': 2189490, 'exercisedValue': 7120922, 'unexercisedValue': 1726471}, {'maxAge': 1, 'name': 'Mr. Craig E. Vosburg', 'age': 57, 'title': 'Chief Services Officer', 'yearBorn': 1967, 'fiscalYear': 2023, 'totalPay': 2161995, 'exercisedValue': 5645551, 'unexercisedValue': 32831188}, {'maxAge': 1, 'name': 'Mr. Devin  Corr', 'title': 'Executive Vice President of Investor Relations', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Ms. Tiffany M. Hall', 'age': 44, 'title': 'General Counsel', 'yearBorn': 1980, 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Raja  Rajamannar', 'age': 62, 'title': 'Chief Marketing & Communications Officer', 'yearBorn': 1962, 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Ms. Ruosi  Wan', 'title': 'Executive Vice President of Strategy, Corporate Development and M&A', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Michael  Fraccaro', 'age': 57, 'title': 'Chief People Officer', 'yearBorn': 1967, 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}]"
+auditRisk,1
+boardRisk,2
+compensationRisk,3
+shareHolderRightsRisk,3
+overallRisk,1
+governanceEpochDate,1740787200
+compensationAsOfEpochDate,1703980800
+executiveTeam,[]
+maxAge,86400
+priceHint,2
+previousClose,531.99
+open,532.34
+dayLow,525.51
+dayHigh,532.59
+regularMarketPreviousClose,531.99
+regularMarketOpen,532.34
+regularMarketDayLow,525.51
+regularMarketDayHigh,532.59
+dividendRate,3.04
+dividendYield,0.57
+exDividendDate,1744156800
+payoutRatio,0.1901
+fiveYearAvgDividendYield,0.52
+beta,1.102
+trailingPE,38.06592
+forwardPE,32.256107
+volume,901925
+regularMarketVolume,901928
+averageVolume,2677615
+averageVolume10days,3098490
+averageDailyVolume10Day,3098490
+bid,527.56
+ask,527.94
+bidSize,8
+askSize,11
+marketCap,481705492480
+fiftyTwoWeekLow,428.86
+fiftyTwoWeekHigh,582.23
+priceToSalesTrailing12Months,17.101768
+fiftyDayAverage,544.8164
+twoHundredDayAverage,499.9309
+trailingAnnualDividendRate,2.74
+trailingAnnualDividendYield,0.0051504727
+currency,USD
+tradeable,False
+enterpriseValue,495263809536
+profitMargins,0.45706
+floatShares,903658120
+sharesOutstanding,904889984
+sharesShort,5125285
+sharesShortPriorMonth,4982513
+sharesShortPreviousMonthDate,1738281600
+dateShortInterest,1740700800
+sharesPercentSharesOut,0.0056
+heldPercentInsiders,0.0051599997
+heldPercentInstitutions,0.90174
+shortRatio,1.99
+shortPercentOfFloat,0.0064
+impliedSharesOutstanding,7723880
+bookValue,7.095
+priceToBook,74.468636
+lastFiscalYearEnd,1735603200
+nextFiscalYearEnd,1767139200
+mostRecentQuarter,1735603200
+earningsQuarterlyGrowth,0.197
+netIncomeToCommon,12874000384
+trailingEps,13.88
+forwardEps,16.38
+lastSplitFactor,10:1
+lastSplitDate,1390348800
+enterpriseToRevenue,17.583
+enterpriseToEbitda,28.547
+52WeekChange,0.09915292
+SandP52WeekChange,0.09589827
+lastDividendValue,0.76
+lastDividendDate,1736467200
+quoteType,EQUITY
+currentPrice,528.355
+targetHighPrice,690.0
+targetLowPrice,466.1
+targetMeanPrice,618.2639
+targetMedianPrice,626.5
+recommendationMean,1.66667
+recommendationKey,buy
+numberOfAnalystOpinions,36
+totalCash,8771999744
+totalCashPerShare,9.621
+ebitda,17348999168
+totalDebt,18986000384
+quickRatio,0.653
+currentRatio,1.026
+totalRevenue,28167000064
+debtToEquity,291.42
+revenuePerShare,30.451
+returnOnAssets,0.22715999
+returnOnEquity,1.90557
+grossProfits,28167000064
+freeCashflow,14463750144
+operatingCashflow,14780000256
+earningsGrowth,0.223
+revenueGrowth,0.144
+grossMargins,1.0
+ebitdaMargins,0.61592996
+operatingMargins,0.56323004
+financialCurrency,USD
+symbol,MA
+language,en-US
+region,US
+typeDisp,Equity
+quoteSourceName,Nasdaq Real Time Price
+triggerable,True
+customPriceAlertConfidence,HIGH
+corporateActions,"[{'header': 'Dividend', 'message': 'MA announced a cash dividend of 0.76 with an ex-date of Apr. 9, 2025', 'meta': {'eventType': 'DIVIDEND', 'dateEpochMs': 1744171200000, 'amount': '0.76'}}]"
+regularMarketTime,1742317331
+exchange,NYQ
+messageBoardId,finmb_6477196
+exchangeTimezoneName,America/New_York
+exchangeTimezoneShortName,EDT
+gmtOffSetMilliseconds,-14400000
+market,us_market
+esgPopulated,False
+regularMarketChange,-3.6350098
+regularMarketDayRange,525.51 - 532.59
+fullExchangeName,NYSE
+averageDailyVolume3Month,2677615
+fiftyTwoWeekLowChange,99.494995
+fiftyTwoWeekLowChangePercent,0.23199879
+fiftyTwoWeekRange,428.86 - 582.23
+fiftyTwoWeekHighChange,-53.875
+fiftyTwoWeekHighChangePercent,-0.092532165
+fiftyTwoWeekChangePercent,9.915293
+dividendDate,1746748800
+earningsTimestamp,1738243800
+earningsTimestampStart,1745929800
+earningsTimestampEnd,1746448200
+earningsCallTimestampStart,1738245600
+earningsCallTimestampEnd,1738245600
+isEarningsDateEstimate,True
+epsTrailingTwelveMonths,13.88
+epsForward,16.38
+epsCurrentYear,15.8826
+priceEpsCurrentYear,33.266277
+shortName,Mastercard Incorporated
+longName,Mastercard Incorporated
+marketState,REGULAR
+hasPrePostMarketData,True
+firstTradeDateMilliseconds,1148563800000
+fiftyDayAverageChange,-16.461426
+fiftyDayAverageChangePercent,-0.03021463
+twoHundredDayAverageChange,28.424072
+twoHundredDayAverageChangePercent,0.056856003
+sourceInterval,15
+exchangeDataDelayedBy,0
+averageAnalystRating,1.7 - Buy
+cryptoTradeable,False
+regularMarketChangePercent,-0.68328536
+regularMarketPrice,528.355
+trailingPegRatio,2.1339

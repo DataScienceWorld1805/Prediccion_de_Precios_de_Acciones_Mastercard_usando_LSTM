@@ -1,0 +1,28 @@
+{
+    "feature_columns": [
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Volume",
+        "RSI",
+        "MACD",
+        "MACD_Signal",
+        "MACD_Hist",
+        "MA_7",
+        "MA_14",
+        "MA_30",
+        "MA_50",
+        "MA_200",
+        "Price_Change",
+        "Volatility"
+    ],
+    "sequence_length": 60,
+    "prediction_days": 30,
+    "test_size": 0.2,
+    "rmse": 19.899531677147987,
+    "mae": 14.868429508425422,
+    "mape": 3.6768297424916363,
+    "last_date": "2025-03-18",
+    "last_price": 528.35498046875
+}
